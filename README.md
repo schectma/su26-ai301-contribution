@@ -1,15 +1,15 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#]: teamcolors for teams >9
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** [1]  
+**Student:** Alex Schectman  
+**Issue:** [#4123](https://github.com/wesnoth/wesnoth/issues/4123)  
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+This issue is a simple enhancement that serves as a baby step into graphical asset management for a game. Stated felt difficulty is clear, and the desired outcome is straightforward enough to let any given contributor immediately hone in on a well-defined aspect of the codebase. I also have a fondness for tactical strategy games, so there's an element of genuine personal interest.
 
 ---
 
