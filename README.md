@@ -1,4 +1,4 @@
-# Contribution [#]: teamcolors for teams >9
+# Contribution 1: teamcolors for teams >9
 
 **Contribution Number:** [1]  
 **Student:** Alex Schectman  
