@@ -17,19 +17,24 @@ This issue is a simple enhancement that serves as a baby step into graphical ass
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+Only nine side/unit colors are in use, but at least six more are available and would be useful.
 
 ### Expected Behavior
 
-[What should happen?]
+Sides/units created in quantities up to 15 should have unique identifying colors.
 
 ### Current Behavior
 
-[What actually happens?]
+Sides/units creates in quantities between nine and 15 share the same color (teal).
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+Scenario setup and team management: `wesnot/src/team.cpp`
+Others:
+```
+wesnot/src/game_initialization/connect_engine.cpp
+wesnot/src/game_config.cpp
+```
 
 ---
 
@@ -47,7 +52,7 @@ This issue is a simple enhancement that serves as a baby step into graphical ass
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
+- **Commit showing reproduction:** [fa0e05d](https://github.com/schectma/wesnoth/commit/fa0e05d23d8b5db25d5f9cffb467deb9ddec436e))
 - **Screenshots/logs:** [If applicable]
 - **My findings:** [What you discovered during reproduction]
 
