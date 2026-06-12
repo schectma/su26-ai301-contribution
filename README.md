@@ -42,7 +42,9 @@ wesnot/src/game_config.cpp
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+OS: Ubuntu 24.04 in WSL 2.6.1 on Windows 11 Home 25H2 26200.8655.
+Official INSTALL.md offers sparse instructions for Windows setup but overly-general instructions for Linux. I opted to attempt the latter with AI assistance, if for no other reason than to ensure CLI commands and navigation remained simple. Initially I'd tried to use my Ubuntu 22.04 install, but that didn't support SDL3 (packages unavailable for that version), so I had to install 22.04. Following that, I used Copilot to guide me through running test suites, then I launched the game to verify that it built correctly. wml_tests kept timing out but all boost_tests succeeded and the game ran properly.
+I'm using VS Code with a remote connection to the local repo directory in WSL to work on files. 
 
 ### Steps to Reproduce
 
