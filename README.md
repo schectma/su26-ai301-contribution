@@ -60,7 +60,7 @@ I'm using VS Code with a remote connection to the local repo directory in WSL to
 <img width="1592" height="774" alt="Screenshot 2026-06-12 153348" src="https://github.com/user-attachments/assets/4ecc208e-51d0-404c-a91e-56e7cc93e8bf" />
 <img width="952" height="578" alt="image" src="https://github.com/user-attachments/assets/9e18929e-019b-4949-ae3d-ca11448fb000" />
 
-- **My findings:** [What you discovered during reproduction]
+- **My findings:** Modifying this behavior is not as simple as changing a couple lines in a config file. Sides are capped at nine by design so any number beyond that can only be defined in custom campaign files. This helped me realize that there's likely a formula somewhere in the C++ code that directly maps each side to a color by index (or similar instance indicator). With the help of AI, I began to trace the color assignment pipeline and learned that it spans at least a couple files. I also learned that WML and the game's use of it is fairly easy to grasp and use (the official wiki and forums are great).
 
 ---
 
