@@ -55,8 +55,11 @@ I'm using VS Code with a remote connection to the local repo directory in WSL to
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [fa0e05d](https://github.com/schectma/wesnoth/commit/fa0e05d23d8b5db25d5f9cffb467deb9ddec436e))
-- **Screenshots/logs:** [If applicable]
+- **Commit showing reproduction:** [fa0e05d](https://github.com/schectma/wesnoth/commit/fa0e05d23d8b5db25d5f9cffb467deb9ddec436e)
+- **Screenshots/logs:**
+<img width="1592" height="774" alt="Screenshot 2026-06-12 153348" src="https://github.com/user-attachments/assets/4ecc208e-51d0-404c-a91e-56e7cc93e8bf" />
+<img width="952" height="578" alt="image" src="https://github.com/user-attachments/assets/9e18929e-019b-4949-ae3d-ca11448fb000" />
+
 - **My findings:** [What you discovered during reproduction]
 
 ---
