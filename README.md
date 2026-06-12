@@ -48,9 +48,10 @@ I'm using VS Code with a remote connection to the local repo directory in WSL to
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Add a new valid campaign, map, scenario, and main config file to the ./data/campaigns/ directory in the code/text editor. Terrain should be as simple as possible (just plain grass or dirt) and side/unit count should be 16.
+2. Launch the game by executing ./wesnoth in the CLI while pwd is the root of the repo.
+3. Click "Campaign", scroll down to and click the newly-added campaign, then click "Play".
+4. Observe population of map with 16 units, the first nine (typically counting from the left) of which sit atop a uniquely colored disc/halo. All units beyond the first nine should sit atop the same color (teal).
 
 ### Reproduction Evidence
 
