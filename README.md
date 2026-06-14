@@ -29,7 +29,8 @@ Sides/units creates in quantities between nine and 15 share the same color (teal
 
 ### Affected Components
 
-Scenario setup and team management: `wesnot/src/team.cpp`
+Color definitions: `wesnoth/data/core/team-colors.cfg`
+Scenario setup and team management: `wesnoth/src/team.cpp`
 Others:
 ```
 wesnot/src/game_initialization/connect_engine.cpp
@@ -68,7 +69,7 @@ I'm using VS Code with a remote connection to the local repo directory in WSL to
 
 ### Analysis
 
-Several colors available in team-colors.cfg are simply not made available for use by the default color rotation logic. 
+Several colors available in `team-colors.cfg` are simply not made available for use by the default color rotation logic. 
 
 ### Proposed Solution
 
@@ -80,10 +81,10 @@ Using UMPIRE framework (adapted):
 
 **Understand:** Only sides 1-9 get distinct colors. Any sides beyond that share an identical color. The contributor who proposed this as an issue wants to expand that range of unique colors to 15. 
 
-**Match:** Color definitions in team-colors.cfg use gate flags for activation.
+**Match:** Color definitions in `team-colors.cfg` use gate flags for activation.
 
 **Plan:**
-1. Add "default=yes" to the definition of each color specified in the original issue.
+1. Add `default=yes` to the definition of each color specified in the original issue.
 
 **Implement:** [fix-issue-4123](https://github.com/schectma/wesnoth/tree/fix-issue-4123)
 
