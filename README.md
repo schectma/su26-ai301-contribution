@@ -72,15 +72,15 @@ Several colors available in team-colors.cfg are simply not made available for us
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+Enable those colors for use in the standard rotation of those assignable.
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** Only sides 1-9 get distinct colors. Any sides beyond that share an identical color. The contributor who proposed this as an issue wants to expand that range of unique colors to 15. 
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** Color definitions in team-colors.cfg use gate flags for activation.
 
 **Plan:** [Step-by-step implementation plan]
 1. [Modify file X to do Y]
