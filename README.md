@@ -82,16 +82,14 @@ Using UMPIRE framework (adapted):
 
 **Match:** Color definitions in team-colors.cfg use gate flags for activation.
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:**
+1. Add "default=yes" to the definition of each color specified in the original issue.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [fix-issue-4123](https://github.com/schectma/wesnoth/tree/fix-issue-4123)
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** Contribution guidelines have not been violated. Proposed fix is extremely minimal and based on another user's/contributor's acknowledged valid suggestion.
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** Verification will use the same new campaign added for reproduction. Will just launch the game and visually confirm that all sides on the map have a distinct color.
 
 ---
 
