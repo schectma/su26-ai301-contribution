@@ -98,13 +98,12 @@ Using UMPIRE framework (adapted):
 
 ### Unit Tests
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+Boost tests: https://github.com/wesnoth/wesnoth/blob/master/run_boost_tests
+There are WML tests but they all time out. This doesn't seem to have any effect on runtime outcomes or other tests.
 
 ### Integration Tests
 
-CI pipeline includes tests for various platforms as well as for WML (proprietary markup language) formatting.
+CI pipeline includes [tests](https://github.com/wesnoth/wesnoth/tree/master/utils/CI) for various platforms as well as for WML (proprietary markup language) formatting.
 
 ### Manual Testing
 
