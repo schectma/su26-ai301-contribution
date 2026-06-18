@@ -115,13 +115,17 @@ Using UMPIRE framework (adapted):
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week [1] Progress
 
-[What you built this week, challenges faced, decisions made]
+GH comms; environment setup; issue subdivided; main issue fix attempted (PR pushed).
 
-### Week [Y] Progress
+### Week [2] Progress
 
-[Continue documenting as you work]
+Further comms (invited to Discord); secondary issue fix attempted; both PRs proven erroneous (violated an unwritten but implied program standard).
+
+### Week [3] Progress
+
+Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an external spinning drive; re-establishment of dev environment;
 
 ### Code Changes
 
