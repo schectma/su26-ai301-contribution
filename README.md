@@ -123,27 +123,27 @@ Further comms (invited to Discord); secondary issue fix attempted; both PRs prov
 
 ### Week [3] Progress
 
-Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an external spinning drive; re-establishment of dev environment;
+Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an external spinning drive; re-establishment of dev environment; fixed original PR with new commit.
 
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** `wesnoth/data/core/team-colors.cfg`
+- **Key commits:** [cd25696488b22d57aa9cf6dde1f5afd3281b1112](https://github.com/wesnoth/wesnoth/pull/11282/changes/cd25696488b22d57aa9cf6dde1f5afd3281b1112)
+- **Approach decisions:** Reordering `[color_change]` blocks is the only safe way to append the list of available colors. Enabling in place impacts order of original colors, which is undesirable. Separating fallback/overflow out into a different issue is necessary because it most likely requires modification of logic, which would warrant a different review process and discussion.
 
 ---
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** [#11282](https://github.com/wesnoth/wesnoth/pull/11282)
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** Enables six additional colors in ./data/core/team-colors.cfg. Addresses the primary stated difficulty/request of issue #4123.
 
 **Maintainer Feedback:**
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** [**Awaiting review** / Iterating / Approved / Merged]
 
 ---
 
