@@ -140,6 +140,7 @@ Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an 
 **PR Description:** Enables six additional colors in ./data/core/team-colors.cfg. Addresses the primary stated difficulty/request of issue #4123.
 
 **Maintainer Feedback:**
+None as of 6/18/26. Will log here as/if it's received.
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
@@ -151,20 +152,20 @@ Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an 
 
 ### Technical Skills Gained
 
-[What you learned technically]
+Local dev environment setup for a C++ project; more fine-grained commit management (I had to rescind and alter several) in a forked/official repo loop; some WML (proprietary to Wesnoth but it's something).
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+Digging through code to find and understand the color processing pipeline. I'm barely versed in `grep` and was using Copilot (in-browser; fed links to the official GH repo for reference) so understanding anything for the first couple days was like wading through a ball pit in drunk goggles. Now I generally get how it works and am ready to drill into it for related issues very shortly.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+First, just learn how to search for things in a codebase properly (i.e. use `grep` intelligently). Second, just use AI in the coding tool so it can actually see the codebase and access whatever better models are available (I think Copilot does this in VS Code). I'd also slow down a bit and try to determine what is and isn't a deliberate design decision in whatever I'm modifying -- I got caught off-guard by the ordering of the original nine thing. 
 
 ---
 
 ## Resources Used
 
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
+- [Wesnoth Wiki: WML](https://wiki.wesnoth.org/GameConfigWML)
+- [Wesnoth Wiki: Terrain](https://wiki.wesnoth.org/TerrainWML)
+- My initial (slightly eager) [attempt](https://github.com/wesnoth/wesnoth/pull/11289) at addressing [#11283](https://github.com/wesnoth/wesnoth/issues/11283)
