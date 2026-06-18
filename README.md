@@ -104,12 +104,11 @@ Using UMPIRE framework (adapted):
 
 ### Integration Tests
 
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+CI pipeline includes tests for various platforms as well as for WML (proprietary markup language) formatting.
 
 ### Manual Testing
 
-[What you tested manually and results]
+Visual confirmation of color changes in running game. What I did certainly had the intended effect (although it wasn't ideal, as I found out afterward).
 
 ---
 
