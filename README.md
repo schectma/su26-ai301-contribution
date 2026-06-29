@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** Alex Schectman  
 **Issue:** [#4123](https://github.com/wesnoth/wesnoth/issues/4123)  
-**Status:** [Phase III] [Complete]
+**Status:** [Phase IV] [Complete]
 
 ---
 
@@ -69,22 +69,22 @@ I'm using VS Code with a remote connection to the local repo directory in WSL to
 
 ### Analysis
 
-Several colors available in `team-colors.cfg` are simply not made available for use by the default color rotation logic. 
+Several colors available in `team-colors.cfg` are simply not made available for use by the default color rotation logic. Default color assignment is handled by a specific function in `team.cpp` but it just can't handle more than the original nine colors. Minimap reds are all literally the same rgb hex value.
 
 ### Proposed Solution
 
-Enable those colors for use in the standard rotation of those assignable.
+Enable those colors for use in the standard rotation of those assignable. Overload that default color assignment function to just use the last available color. Pick a few close but visually distinguishable reds.
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** Only sides 1-9 get distinct colors. Any sides beyond that share an identical color. The contributor who proposed this as an issue wants to expand that range of unique colors to 15. 
+**Understand:** Only sides 1-9 get distinct colors. Any sides beyond that share an identical color. The contributor who proposed this as an issue wants to expand that range of unique colors to 15. They also want one of those new colors to be the fallback color and want reds on the minimap to be easier to tell apart.
 
-**Match:** Color definitions in `team-colors.cfg` use gate flags for activation.
+**Match:** Color definitions in `team-colors.cfg` use gate flags for activation. `get_side_color_id()` in `team.cpp` uses a hardcoded string. Red rgb hex values have a single purpose and can safely be altered.
 
 **Plan:**
-1. Add `default=yes` to the definition of each color specified in the original issue.
+1. Add `default=yes` to the definition of each color specified in the original issue. Add "lightred" to `get_side_color_id()` along with logic that checks for it. Experiment with and propose a few new minimap reds.
 
 **Implement:** [fix-issue-4123](https://github.com/schectma/wesnoth/tree/fix-issue-4123)
 
@@ -123,24 +123,28 @@ Further comms (invited to Discord); secondary issue fix attempted; both PRs prov
 
 ### Week [3] Progress
 
-Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an external spinning drive; re-establishment of dev environment; fixed original PR with new commit.
+Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an external spinning drive; re-establishment of dev environment; fixed original PR with new commit. Also addressed two other related sub-issues.
+
+### Week [4] Progress
+
+Nothing new, really. Updated this document to reflect that this PR cycle really addressed three of five sub-issues. Those three were a closely-related subset of the original parent issue.
 
 ### Code Changes
 
-- **Files modified:** `wesnoth/data/core/team-colors.cfg`
-- **Key commits:** [cd25696488b22d57aa9cf6dde1f5afd3281b1112](https://github.com/wesnoth/wesnoth/pull/11282/changes/cd25696488b22d57aa9cf6dde1f5afd3281b1112)
-- **Approach decisions:** Reordering `[color_change]` blocks is the only safe way to append the list of available colors. Enabling in place impacts order of original colors, which is undesirable. Separating fallback/overflow out into a different issue is necessary because it most likely requires modification of logic, which would warrant a different review process and discussion.
+- **Files modified:** `wesnoth/data/core/team-colors.cfg` `wesnoth/src/team.cpp`
+- **Key commits:** [cd25696488b22d57aa9cf6dde1f5afd3281b1112](https://github.com/wesnoth/wesnoth/pull/11282/changes/cd25696488b22d57aa9cf6dde1f5afd3281b1112); [02f8437060aae06d7f6e691cda28a47786436422](https://github.com/wesnoth/wesnoth/pull/11289/changes/02f8437060aae06d7f6e691cda28a47786436422); [bf04a83d7fe461ee4d6ef7b62d65dbbebd493297](https://github.com/wesnoth/wesnoth/pull/11294/changes/bf04a83d7fe461ee4d6ef7b62d65dbbebd493297)
+- **Approach decisions:** Reordering `[color_change]` blocks is the only safe way to append the list of available colors. Enabling in place impacts order of original colors, which is undesirable. Changing fallback color must occur downstream from the color expansion and is most safely accomplished by amending existing relevant logic. Stratifying reds so they're more distinguishable is as easy as changing rgb hex values, but requires some eyeballing of hues.
 
 ---
 
 ## Pull Request
 
-**PR Link:** [#11282](https://github.com/wesnoth/wesnoth/pull/11282)
+**PR Link:** [#11282](https://github.com/wesnoth/wesnoth/pull/11282); [#11289](https://github.com/wesnoth/wesnoth/pull/11289); [#11294](https://github.com/wesnoth/wesnoth/pull/11294)
 
-**PR Description:** Enables six additional colors in ./data/core/team-colors.cfg. Addresses the primary stated difficulty/request of issue #4123.
+**PR Description:** Enables six additional colors in `./data/core/team-colors.cfg`; changes fallback/overflow color to one of those newly-enabled colors; and makes red variants more distinguishable from one another on the minimap. Addresses three of five distinct sub-issues of issue #4123.
 
 **Maintainer Feedback:**
-None as of 6/18/26. Will log here as/if it's received.
+None as of 6/28/26. Will log here as/if it's received.
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
