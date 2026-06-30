@@ -54,7 +54,7 @@ flowchart TD
 
 ### Affected Components
 
-`./src/replay.cpp:364-379`
+`src/replay.cpp:364-379`
 
 ---
 
@@ -65,6 +65,8 @@ flowchart TD
 See [previous README.](https://github.com/schectma/su26-ai301-contribution/blob/main/README.md)
 
 ### Steps to Reproduce
+
+#### Visually
 
 1. Launch Wesnoth and click the button at the bottom-left corner of the screen that says "i About".
 2. Click Paths in the list on the left of the window that pops up and note the location of saved games.
@@ -94,6 +96,12 @@ done
 8. Copy contents of generated `spam.txt` and paste into save/replay file immediately after existing speak commands. Save file.
 9. Relaunch Wesnoth, click Load, and select the same save/replay file. Click the play button (▶️).
 10. Observe time taken to load chat files.
+
+#### Via Debug
+
+1. Set breakpoint at `src/replay.cpp:370` and launch game using debugger of choice.
+2. Follow steps 1-9 above.
+3. Step over and out of for loop repeatedly, observing its repetition.
 
 ### Reproduction Evidence
 
