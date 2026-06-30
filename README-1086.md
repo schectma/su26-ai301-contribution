@@ -66,9 +66,34 @@ See [previous README.](https://github.com/schectma/su26-ai301-contribution/blob/
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Launch Wesnoth and click the button at the bottom-left corner of the screen that says "i About".
+2. Click Paths in the list on the left of the window that pops up and note the location of saved games.
+3. Return to the main menu, click Preferences > Advanced > Compress saved games, then select No from the dropdown.
+4. Return to the main menu, start a new local multiplayer game, click Actions > Speak (or press `m` on keyboard), type any message, then hit enter.
+5. Click Menu > Save Replay, name it as desired, then click Save. Quit and close Wesnoth.
+6. Navigate to previously ascertained saved games location and open the generated replay file (it probably won't have an extension but should be recognizable by name).
+7. Run the following in the CLI:
+```
+(
+for i in $(seq 1 5000); do
+  t=$((1782839657 + i))
+  cat <<EOF
+    [command]
+        undo=no
+        [speak]
+            id="asche"
+            message="msg $i"
+            side=1
+            time=$t
+        [/speak]
+    [/command]
+EOF
+done
+) > spam.txt
+```
+8. Copy contents of generated `spam.txt` and paste into save/replay file immediately after existing speak commands. Save file.
+9. Relaunch Wesnoth, click Load, and select the same save/replay file. Click the play button (▶️).
+10. Observe time taken to load chat files.
 
 ### Reproduction Evidence
 
