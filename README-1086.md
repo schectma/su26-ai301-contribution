@@ -17,7 +17,7 @@ Recommended by a maintainer while I was working on another issue. Gets into the 
 
 ### Problem Description
 
-Launching the chat log window triggers iteration over the entire related save or replay file to populate the GUI. Repeated O(n) operation that gets slower every time. 
+Launching the chat log window triggers iteration over all related chat records in the the related save or replay file to populate the GUI. Repeated O(n) operation that gets slower every time. 
 
 ### Expected Behavior
 
@@ -71,31 +71,41 @@ See [previous README.](https://github.com/schectma/su26-ai301-contribution/blob/
 1. Launch Wesnoth and click the button at the bottom-left corner of the screen that says "i About".
 2. Click Paths in the list on the left of the window that pops up and note the location of saved games.
 3. Return to the main menu, click Preferences > Advanced > Compress saved games, then select No from the dropdown.
-4. Return to the main menu, start a new local multiplayer game, click Actions > Speak (or press `m` on keyboard), type any message, then hit enter.
-5. Click Menu > Save Replay, name it as desired, then click Save. Quit and close Wesnoth.
-6. Navigate to previously ascertained saved games location and open the generated replay file (it probably won't have an extension but should be recognizable by name).
-7. Run the following in the CLI:
-```
-(
-for i in $(seq 1 5000); do
-  t=$((1782839657 + i))
-  cat <<EOF
-    [command]
-        undo=no
-        [speak]
-            id="asche"
-            message="msg $i"
-            side=1
-            time=$t
-        [/speak]
-    [/command]
-EOF
-done
-) > spam.txt
-```
-8. Copy contents of generated `spam.txt` and paste into save/replay file immediately after existing speak commands. Save file.
-9. Relaunch Wesnoth, click Load, and select the same save/replay file. Click the play button (▶️).
-10. Observe time taken to load chat files.
+4. Return to the main menu, start a new local multiplayer game, and do one or both of the following:
+
+    a. Manually add multiple messages.
+
+    1.  Click Actions > Speak (or press `m` on keyboard), type any message, then hit enter. Repeat at least once more.
+
+    b. Auto-populate save file with spam (more dramatic).
+
+    1. Click Actions > Speak (or press `m` on keyboard), type any message, then hit enter.
+    2. Click Menu > Save Replay, name it as desired, then click Save. Quit and close Wesnoth.
+    3. Navigate to previously ascertained saved games location and open the generated replay file (it probably won't have an extension but should be recognizable by name).
+    4. Run the following in the CLI:
+    ```
+    (
+    for i in $(seq 1 5000); do
+      t=$((1782839657 + i))
+      cat <<EOF
+        [command]
+            undo=no
+            [speak]
+                id="asche"
+                message="msg $i"
+                side=1
+                time=$t
+            [/speak]
+        [/command]
+    EOF
+    done
+    ) > spam.txt
+    ```
+    5. Copy contents of generated `spam.txt` and paste into save/replay file immediately after existing speak commands. Save file.
+
+5. Relaunch Wesnoth, click Load, and select the same save/replay file. Click the play button (▶️) and let it run the replay.
+6. Click Menu > Chat log (or `alt+c`). Repeat at least once.
+7. Observe CLI output (in code editor) for readouts of tags read per chat log launch.
 
 #### Via Debug
 
@@ -105,9 +115,9 @@ done
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+- **Commit showing reproduction:** [069310](https://github.com/wesnoth/wesnoth/commit/3e8af53f92434898da074230eed63f24018dc80e)
+- **Screenshots/logs:** <img width="527" height="94" alt="image" src="https://github.com/user-attachments/assets/5c570f97-b0ac-4531-8962-ac6f9d124202" />
+- **My findings:** `[speak]` tag section of replay file is in fact iterated over each time the chat log is launched in-game.
 
 ---
 
