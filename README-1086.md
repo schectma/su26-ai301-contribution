@@ -1,6 +1,6 @@
 # Contribution [#]: Please cache the chatlog
 
-**Contribution Number:** [1 / **2** / 3]  
+**Contribution Number:** [1 / **<ins>2</ins>** / 3]  
 **Student:** Alex Schectman  
 **Issue:** [#1086](https://github.com/wesnoth/wesnoth/issues/1086)  
 **Status:** [Phase I / **<ins>Phase II</ins>** / Phase III / Phase IV] [**<ins>In Progress</ins>** / Complete]
@@ -129,15 +129,49 @@ Line 372 clears and rebuilds the chat log from scratch each time it's opened in-
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+Cache fully-built chat log and rebuild only when a new message is added.
+```mermaid
+flowchart TD
+
+    A[User opens Chat Log UI]
+        --> B[menu_handler::show_chat_log]
+
+    B --> C[Construct chat_log::model]
+
+    C --> D[replay::build_chat_log]
+
+    D --> E{cache_size == message_locations.size?}
+
+    E -->|Yes| F[Return cached chat log]
+
+    E -->|No| G[Clear cache]
+
+    subgraph Rebuild Chat Log
+        G --> H{For each stored chat location}
+        H --> I[Read speak entry from replay]
+        I --> J[Apply ignore and lobby filters]
+        J --> K[Append chat_msg to cache]
+        K --> H
+    end
+
+    H -->|done| L[Update cache_size]
+
+    L --> F
+
+    F --> M[Display chat log UI]
+
+    M --> N[User closes dialog]
+
+    N --> A
+```
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** Reopening the chat log repeatedly performs the same O(n) process, even when neither the replay nor the chat history has changed.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** `src/help/help.cpp:106-107 & :128-139` caches a computed result, stores the source collection's size, and rebuilds only when the current size differs.
 
 **Plan:** [Step-by-step implementation plan]
 1. [Modify file X to do Y]
