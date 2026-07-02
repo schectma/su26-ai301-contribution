@@ -3,7 +3,7 @@
 **Contribution Number:** [1 / **<ins>2</ins>** / 3]  
 **Student:** Alex Schectman  
 **Issue:** [#1086](https://github.com/wesnoth/wesnoth/issues/1086)  
-**Status:** [Phase I / **<ins>Phase II</ins>** / Phase III / Phase IV] [**<ins>In Progress</ins>** / Complete]
+**Status:** [Phase I / **<ins>Phase II</ins>** / Phase III / Phase IV] [In Progress / **<ins>Complete</ins>**]
 
 ---
 
