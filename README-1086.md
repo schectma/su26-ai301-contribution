@@ -3,7 +3,7 @@
 **Contribution Number:** [1 / **2** / 3]  
 **Student:** Alex Schectman  
 **Issue:** [#1086](https://github.com/wesnoth/wesnoth/issues/1086)  
-**Status:** [**Phase I** / Phase II / Phase III / Phase IV] [**<ins>In Progress</ins>** / Complete]
+**Status:** [Phase I / **<ins>Phase II</ins>** / Phase III / Phase IV] [**<ins>In Progress</ins>** / Complete]
 
 ---
 
@@ -125,7 +125,7 @@ See [previous README.](https://github.com/schectma/su26-ai301-contribution/blob/
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+Line 372 clears and rebuilds the chat log from scratch each time it's opened in-game.
 
 ### Proposed Solution
 
