@@ -173,16 +173,16 @@ Using UMPIRE framework (adapted):
 
 **Match:** `src/help/help.cpp:106-107 & :128-139` caches a computed result, stores the source collection's size, and rebuilds only when the current size differs.
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:**
+1. Refactor `message_log` and add corresponding counter/gauge into scope of `replay` object in `replay.hpp`.
+2. Add a check to `build_chat_log()` in `replay.cpp` to prevent chat log rebuild if aforementioned counter is unchanged.
+3. Test and commit each of the above steps.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [[Link to your branch/commits as you work]](https://github.com/wesnoth/wesnoth/pull/11346)
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** Confirm modifications don't affect any other parts of the codebase. Ensure project naming and formatting conventions are respected (and just avoid inconsistencies). Diff changes locally to avoid losing critical pre-existing code.
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** Just run the game and test the exact feature being modified. Set a breakpoint and run via debugger to verify.
 
 ---
 
