@@ -3,7 +3,7 @@
 **Contribution Number:** [1 / **<ins>2</ins>** / 3]  
 **Student:** Alex Schectman  
 **Issue:** [#1086](https://github.com/wesnoth/wesnoth/issues/1086)  
-**Status:** [Phase I / **<ins>Phase II</ins>** / Phase III / Phase IV] [In Progress / **<ins>Complete</ins>**]
+**Status:** [Phase I / Phase II / Phase III / **<ins>Phase IV</ins>**] [**<ins>In Progress</ins>** / Complete]
 
 ---
 
@@ -190,50 +190,45 @@ Using UMPIRE framework (adapted):
 
 ### Unit Tests
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+N/A
 
 ### Integration Tests
 
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+- [ ] Replay chaining/swapping
+- [ ] Save chaining/swapping
+- [ ] Online multiplayer (join existing game)
 
 ### Manual Testing
 
-[What you tested manually and results]
+Single replay -- works as expected.
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 2 Progress
 
-[What you built this week, challenges faced, decisions made]
-
-### Week [Y] Progress
-
-[Continue documenting as you work]
+Formulated and applied solution (mostly based on AI suggestions) and 
 
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** `src/replay.cpp`; `src/replay.hpp`
+- **Key commits:** [da7ab68](https://github.com/wesnoth/wesnoth/pull/11346/changes/da7ab68a858250316eb05dbeb57a93ba0b8918cf)
+- **Approach decisions:** Moved chat log from global to relevant class scope to make addressing the issue easier and reduce necessary cleanup.
 
 ---
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** [11346](https://github.com/wesnoth/wesnoth/pull/11346)
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** Attempts to address #1086. Re-scopes message_log and its new corresponding counter/gauge to the replay class, then determines whether to rebuild the chat log depending on whether that counter/gauge has changed.
 
 **Maintainer Feedback:**
-- [Date]: [Summary of feedback received]
+- 20260712: Does this work as expected when loading saves vs replays vs joining an in-progress online game?
 - [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** [Awaiting review / **<ins>Iterating</ins>** / Approved / Merged]
 
 ---
 
