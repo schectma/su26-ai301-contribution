@@ -236,15 +236,15 @@ Formulated and applied solution (mostly based on AI suggestions) and
 
 ### Technical Skills Gained
 
-
+Mostly Git and version control.
 
 ### Challenges Overcome
 
-Figuring out where to 
+Figuring out I/O for this specific pipeline in the game; navigating maintainer preferences.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+Reference project utilities and assess for code smells before formulating changes.
 
 ---
 
