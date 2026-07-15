@@ -178,7 +178,7 @@ Using UMPIRE framework (adapted):
 2. Add a check to `build_chat_log()` in `replay.cpp` to prevent chat log rebuild if aforementioned counter is unchanged.
 3. Test and commit each of the above steps.
 
-**Implement:** [[Link to your branch/commits as you work]](https://github.com/wesnoth/wesnoth/pull/11346)
+**Implement:** [11346](https://github.com/wesnoth/wesnoth/pull/11346)
 
 **Review:** Confirm modifications don't affect any other parts of the codebase. Ensure project naming and formatting conventions are respected (and just avoid inconsistencies). Diff changes locally to avoid losing critical pre-existing code.
 
@@ -194,13 +194,13 @@ N/A
 
 ### Integration Tests
 
-- [ ] Replay chaining/swapping
-- [ ] Save chaining/swapping
-- [ ] Online multiplayer (join existing game)
+N/A
 
 ### Manual Testing
 
-Single replay -- works as expected.
+- [x] Replay chaining/swapping
+- [x] Save chaining/swapping
+- [x] Multiplayer (join existing game)
 
 ---
 
@@ -226,7 +226,7 @@ Formulated and applied solution (mostly based on AI suggestions) and
 
 **Maintainer Feedback:**
 - 20260712: Does this work as expected when loading saves vs replays vs joining an in-progress online game?
-- [Date]: [How you addressed it]
+- 20260715: Tested all of the above and followed up with maintainer.
 
 **Status:** [Awaiting review / **<ins>Iterating</ins>** / Approved / Merged]
 
@@ -236,11 +236,11 @@ Formulated and applied solution (mostly based on AI suggestions) and
 
 ### Technical Skills Gained
 
-[What you learned technically]
+
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+Figuring out where to 
 
 ### What I'd Do Differently Next Time
 
