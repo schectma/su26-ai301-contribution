@@ -153,8 +153,8 @@ Nothing new, really. Updated this document to reflect that this PR cycle really 
 - 20260715: I agreed and pushed a relevant change.
 
 ### 11294
-- 20260715: Maintainer pointed out that my commit contained duplicate code.
-- 20260715: I discovered that this occurred because I'd resolved a merge conflict against a master branch version of the file that had changed (due to #11282) since opening the PR. Had to rebase and just make the change again.
+- [20260715:](https://github.com/wesnoth/wesnoth/pull/11294#issuecomment-4982691642) Maintainer pointed out that my commit contained duplicate code.
+- [20260715:](https://github.com/wesnoth/wesnoth/pull/11294#issuecomment-4984328895) I discovered that this occurred because I'd resolved a merge conflict against a master branch version of the file that had changed (due to #11282) since opening the PR. Had to rebase and just make the change again.
 
 **Status:** [**<ins>Awaiting review</ins>** / Iterating / Approved / **<ins>Merged</ins>**]
 
