@@ -144,15 +144,25 @@ Nothing new, really. Updated this document to reflect that this PR cycle really 
 **PR Description:** Enables six additional colors in `./data/core/team-colors.cfg`; changes fallback/overflow color to one of those newly-enabled colors; and makes red variants more distinguishable from one another on the minimap. Addresses three of five distinct sub-issues of issue #4123.
 
 **Maintainer Feedback:**
-None as of 6/28/26. Will log here as/if it's received.
-- [Date]: [Summary of feedback received]
-- [Date]: [How you addressed it]
+### 11282
+- [20260614:](https://github.com/wesnoth/wesnoth/pull/11282#issuecomment-4703294439) Maintainer noted that a part of the issue didn't seem to be addressed.
+- [20260614:](https://github.com/wesnoth/wesnoth/pull/11282#issuecomment-4703351586) I pointed out that the part of the issue noted was really a separate issue.
 
-**Status:** [**Awaiting review** / Iterating / Approved / Merged]
+### 11289
+- [20260713:](https://github.com/wesnoth/wesnoth/pull/11289#discussion_r3573128840) Maintainer questioned my (really the LLM's) approach and suggested it could be simpler.
+- 20260715: I agreed and pushed a relevant change.
+
+### 11294
+- 20260715: Maintainer pointed out that my commit contained duplicate code.
+- 20260715: I discovered that this occurred because I'd resolved a merge conflict against a master branch version of the file that had changed (due to #11282) since opening the PR. Had to rebase and just make the change again.
+
+**Status:** [**<ins>Awaiting review</ins>** / Iterating / Approved / **<ins>Merged</ins>**]
 
 ---
 
 ## Learnings & Reflections
+
+Mostly Git and version control. Lots of commit juggling.
 
 ### Technical Skills Gained
 
