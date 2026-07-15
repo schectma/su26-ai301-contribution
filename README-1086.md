@@ -208,7 +208,11 @@ N/A
 
 ### Week 2 Progress
 
-Formulated and applied solution (mostly based on AI suggestions) and 
+Formulated and applied solution (mostly based on AI suggestions) and opened PR.
+
+### Week 2 Progress
+
+Addressed maintainer suggestions and pushed to PR.
 
 ### Code Changes
 
@@ -233,6 +237,8 @@ Formulated and applied solution (mostly based on AI suggestions) and
 ---
 
 ## Learnings & Reflections
+
+Mature C++ projects often have their own utility libraries and maintainers like when they're used.
 
 ### Technical Skills Gained
 
