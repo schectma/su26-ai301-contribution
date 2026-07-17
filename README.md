@@ -148,15 +148,20 @@ Nothing new, really. Updated this document to reflect that this PR cycle really 
 - [20260614:](https://github.com/wesnoth/wesnoth/pull/11282#issuecomment-4703294439) Maintainer noted that a part of the issue didn't seem to be addressed.
 - [20260614:](https://github.com/wesnoth/wesnoth/pull/11282#issuecomment-4703351586) I pointed out that the part of the issue noted was really a separate issue.
 
+**Status:** [Awaiting review / Iterating / Approved / **<ins>Merged</ins>**]
+
 ### 11289
 - [20260713:](https://github.com/wesnoth/wesnoth/pull/11289#discussion_r3573128840) Maintainer questioned my (really the LLM's) approach and suggested it could be simpler.
 - 20260715: I agreed and pushed a relevant change.
+- 20260717: Discovered maintainer's suggestion conflicts with a CI test.
+
+**Status:** [Awaiting review / **<ins>Iterating</ins>** / Approved / Merged]
 
 ### 11294
 - [20260715:](https://github.com/wesnoth/wesnoth/pull/11294#issuecomment-4982691642) Maintainer pointed out that my commit contained duplicate code.
 - [20260715:](https://github.com/wesnoth/wesnoth/pull/11294#issuecomment-4984328895) I discovered that this occurred because I'd resolved a merge conflict against a master branch version of the file that had changed (due to #11282) since opening the PR. Had to rebase and just make the change again.
 
-**Status:** [**<ins>Awaiting review</ins>** / Iterating / Approved / **<ins>Merged</ins>**]
+**Status:** [Awaiting review / Iterating / Approved / **<ins>Merged</ins>**]
 
 ---
 
