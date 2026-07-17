@@ -232,7 +232,7 @@ Addressed maintainer suggestions and pushed to PR.
 - 20260712: Does this work as expected when loading saves vs replays vs joining an in-progress online game?
 - 20260715: Tested all of the above and followed up with maintainer.
 
-**Status:** [Awaiting review / **<ins>Iterating</ins>** / Approved / Merged]
+**Status:** [**<ins>Awaiting review</ins>** / Iterating / Approved / Merged]
 
 ---
 
