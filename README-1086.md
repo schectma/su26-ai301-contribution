@@ -214,6 +214,10 @@ Formulated and applied solution (mostly based on AI suggestions) and opened PR.
 
 Addressed maintainer suggestions and pushed to PR.
 
+### Week 3 Progress
+
+Addressed maintainer suggestions and pushed to PR. Awaiting what should be final review.
+
 ### Code Changes
 
 - **Files modified:** `src/replay.cpp`; `src/replay.hpp`
