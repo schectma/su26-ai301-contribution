@@ -129,6 +129,10 @@ Ran out of internal C:\ drive space and had to reinstall Ubuntu (via WSL) on an 
 
 Nothing new, really. Updated this document to reflect that this PR cycle really addressed three of five sub-issues. Those three were a closely-related subset of the original parent issue.
 
+### Week [5] Progress
+
+[Posted to forum](https://forums.wesnoth.org/viewtopic.php?p=705234#p705234) about discovered incompaitibility. Received quick response validating it, which prompted me to change my approach. Note dropped in PR; new push planned.
+
 ### Code Changes
 
 - **Files modified:** `wesnoth/data/core/team-colors.cfg` `wesnoth/src/team.cpp`
