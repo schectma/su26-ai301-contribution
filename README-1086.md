@@ -3,7 +3,7 @@
 **Contribution Number:** [1 / **<ins>2</ins>** / 3]  
 **Student:** Alex Schectman  
 **Issue:** [#1086](https://github.com/wesnoth/wesnoth/issues/1086)  
-**Status:** [Phase I / Phase II / Phase III / **<ins>Phase IV</ins>**] [**<ins>In Progress</ins>** / Complete]
+**Status:** [Phase I / Phase II / Phase III / **<ins>Phase IV</ins>**] [In Progress / **<ins>Complete</ins>**]
 
 ---
 
@@ -240,7 +240,7 @@ Pinged maintainer. Screen recordings of testing were ready over a week ago and t
 - 20260712: Does this work as expected when loading saves vs replays vs joining an in-progress online game?
 - 20260715: Tested all of the above and followed up with maintainer.
 
-**Status:** [**<ins>Awaiting review</ins>** / Iterating / Approved / Merged]
+**Status:** [Awaiting review / Iterating / Approved / **<ins>Merged</ins>**]
 
 ---
 
