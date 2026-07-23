@@ -218,6 +218,10 @@ Addressed maintainer suggestions and pushed to PR.
 
 Addressed maintainer suggestions and pushed to PR. Awaiting what should be final review.
 
+### Week 4 Progress
+
+Pinged maintainer. Screen recordings of testing were ready over a week ago and the CI/CD tests all passed, so I just need them to give it a once-over and approve.
+
 ### Code Changes
 
 - **Files modified:** `src/replay.cpp`; `src/replay.hpp`
