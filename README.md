@@ -133,11 +133,15 @@ Nothing new, really. Updated this document to reflect that this PR cycle really 
 
 [Posted to forum](https://forums.wesnoth.org/viewtopic.php?p=705234#p705234) about discovered incompaitibility. Received quick response validating it, which prompted me to change my approach. Note dropped in PR; new push planned.
 
+### Week [6] Progress
+
+Incompatibility of CI test discovered to technically be a bug (albeit a minor one). [Issue opened](https://github.com/wesnoth/wesnoth/issues/11410) and [most recent working commit](https://github.com/wesnoth/wesnoth/commit/696a33239a747e06318f8da65b3ed7316dd5d92a) force-pushed to PR.
+
 ### Code Changes
 
 - **Files modified:** `wesnoth/data/core/team-colors.cfg` `wesnoth/src/team.cpp`
 - **Key commits:** [cd25696488b22d57aa9cf6dde1f5afd3281b1112](https://github.com/wesnoth/wesnoth/pull/11282/changes/cd25696488b22d57aa9cf6dde1f5afd3281b1112); [02f8437060aae06d7f6e691cda28a47786436422](https://github.com/wesnoth/wesnoth/pull/11289/changes/02f8437060aae06d7f6e691cda28a47786436422); [bf04a83d7fe461ee4d6ef7b62d65dbbebd493297](https://github.com/wesnoth/wesnoth/pull/11294/changes/bf04a83d7fe461ee4d6ef7b62d65dbbebd493297)
-- **Approach decisions:** Reordering `[color_change]` blocks is the only safe way to append the list of available colors. Enabling in place impacts order of original colors, which is undesirable. Changing fallback color must occur downstream from the color expansion and is most safely accomplished by amending existing relevant logic. Stratifying reds so they're more distinguishable is as easy as changing rgb hex values, but requires some eyeballing of hues.
+- **Approach decisions:** Reordering `[color_change]` blocks is the only safe way to append the list of available colors. Enabling in place impacts order of original colors, which is undesirable. Changing fallback color must occur downstream from the color expansion and is most safely accomplished by amending existing relevant logic. Stratifying reds so they're more distinguishable is as easy as changing rgb hex values but requires some eyeballing of hues.
 
 ---
 
