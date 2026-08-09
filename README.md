@@ -137,6 +137,10 @@ Nothing new, really. Updated this document to reflect that this PR cycle really 
 
 Incompatibility of CI test discovered to technically be a bug (albeit a minor one). [Issue opened](https://github.com/wesnoth/wesnoth/issues/11410) and [most recent working commit](https://github.com/wesnoth/wesnoth/commit/696a33239a747e06318f8da65b3ed7316dd5d92a) force-pushed to PR.
 
+### Week [7] Progress
+
+None. Zero action on PR or resultant issue. Likely too low priority. Will need to simplify and empirically prove, then offer a solution (separate PR).
+
 ### Code Changes
 
 - **Files modified:** `wesnoth/data/core/team-colors.cfg` `wesnoth/src/team.cpp`
@@ -187,7 +191,7 @@ Digging through code to find and understand the color processing pipeline. I'm b
 
 ### What I'd Do Differently Next Time
 
-First, just learn how to search for things in a codebase properly (i.e. use `grep` intelligently). Second, just use AI in the coding tool so it can actually see the codebase and access whatever better models are available (I think Copilot does this in VS Code). I'd also slow down a bit and try to determine what is and isn't a deliberate design decision in whatever I'm modifying -- I got caught off-guard by the ordering of the original nine thing. 
+First, just learn how to search for things in a codebase properly (i.e. use `grep` intelligently). Second, just use AI in the coding tool so it can actually see the codebase and access whatever better models are available (I think Copilot does this in VS Code). I'd also slow down a bit and try to determine what is and isn't a deliberate design decision in whatever I'm modifying -- I got caught off-guard by the ordering of the original nine thing. Finally, I'd make sure new/forked issues I discover and create are communicated as simply as possible along with a clear suggested solution.
 
 ---
 
